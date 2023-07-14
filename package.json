@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/srvidales/schedule-this/issues"
   },
-  "homepage": "https://github.com/srvidales/schedule-this#readme"
+  "homepage": "https://github.com/srvidales/schedule-this#readme",
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "eslint-config-google": "^0.14.0"
+  }
 }
