@@ -1,0 +1,24 @@
+{
+  "name": "schedule-this",
+  "version": "1.0.0",
+  "description": "Work Day Scheduler",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/srvidales/schedule-this.git"
+  },
+  "keywords": [
+    "work",
+    "day",
+    "scheduler"
+  ],
+  "author": "Sergio R. Vidales Perez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/srvidales/schedule-this/issues"
+  },
+  "homepage": "https://github.com/srvidales/schedule-this#readme"
+}
