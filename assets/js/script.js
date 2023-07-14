@@ -9,16 +9,62 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
+    for(let i = 9; i <= 17; i++) {
+        const hourEl = document.getElementById(`hour-${i}`)
+        const button = hourEl.getElementsByTagName('button')[0]
+        const textAreaEl = hourEl.getElementsByTagName('textarea')[0]
+        button.addEventListener('click', function() {
+            if (textAreaEl.value !== '') {
+                localStorage.setItem(`hour-${i}`, textAreaEl.value)
+            } else {
+                localStorage.removeItem(`hour-${i}`)
+            }
+        })
+    }
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+    const hourNow = Number.parseInt(dayjs().format('H'))
+    console.log(hourNow)
+    for(let i = 9; i <= 17; i++) {
+        const hourEl = document.getElementById(`hour-${i}`)
+        console.log(hourEl)
+        if (i < hourNow) {
+            hourEl.classList.add('past')
+            hourEl.classList.remove('present')
+            hourEl.classList.remove('future')
+        } else {
+            if (i === hourNow) {
+                hourEl.classList.remove('past')
+                hourEl.classList.add('present')
+                hourEl.classList.remove('future')
+            } else {
+                if (i > hourNow) {
+                    hourEl.classList.remove('past')
+                    hourEl.classList.remove('present')
+                    hourEl.classList.add('future')
+                }
+            }
+        }
+
+    }
+
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+    for(let i = 9; i <= 17; i++) {
+        const text = localStorage.getItem(`hour-${i}`)
+        if (text !== null) {
+            const hourEl = document.getElementById(`hour-${i}`)
+            const textAreaEl = hourEl.getElementsByTagName('textarea')[0]
+            textAreaEl.value = text
+        }
+    }
   // TODO: Add code to display the current date in the header of the page.
     dayjs.extend(window.dayjs_plugin_advancedFormat)
     const currentDayEl = document.getElementById('currentDay')
