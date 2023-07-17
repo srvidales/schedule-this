@@ -37,7 +37,7 @@ No installation required for the App to work, but you can install nodejs to make
 
 ## Usage
 
-Open the [page](https://srvidales.github.io/quizzer/) in your favorite browser and create entries by clicking inside
+Open the [page](https://srvidales.github.io/schedule-this/) in your favorite browser and create entries by clicking inside
 the hour box, entering text and then clicking on the disk icon next to the box on the right. You can also remove an
 entry by clicking on the hour box, clearing the text and saving. The entries will persist closing the browser since
 they are saved to local storage and retried upload loading/reloading the app.
