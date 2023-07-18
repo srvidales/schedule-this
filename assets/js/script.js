@@ -21,8 +21,14 @@ $(function() {
       const hourEl = $(this).parent();
       const hourId = hourEl.attr('id');
       const textAreaEl = $(this).prev('textarea');
+      let messageInterval;
       if (textAreaEl.val() !== '') {
+        $('#message-div').toggleClass('d-none');
         localStorage.setItem(hourId, textAreaEl.val());
+        messageInterval = setInterval(function() {
+          $('#message-div').toggleClass('d-none');
+          clearInterval(messageInterval);
+        }, 3000);
       } else {
         localStorage.removeItem(hourId);
       }

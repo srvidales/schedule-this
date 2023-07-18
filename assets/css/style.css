@@ -63,3 +63,26 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+#divider {
+  height: 10px;
+  color: black;
+  opacity: 100%;
+}
+
+#message-div {
+  display: flex;
+  justify-content: center;
+}
+
+#message {
+  align-content: center;
+}
+
+#localStorage {
+  color: red;
+}
+
+#checkmark {
+  color: green;
+}
